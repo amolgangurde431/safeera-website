@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Safeera — Your Ride, Your Safety</title>
+  <meta name="description" content="Safeera — Safe, reliable and affordable ride service. Book bike, car or parcel delivery." />
+  <link rel="icon" href="favicon.png" />
+  <style>
+    :root{
+      --green:#2ecc71;
+      --dark:#222;
+      --muted:#666;
+      --accent:#1f8a4b;
+      --bg:#fbfbfb;
+      --card:#ffffff;
+      --maxw:1100px;
+      font-family: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--dark);line-height:1.45}
+    .container{max-width:var(--maxw);margin:0 auto;padding:24px}
+
+    /* header */
+    header{background:linear-gradient(90deg,#ffffff, #f6fff6);box-shadow:0 2px 8px rgba(20,20,20,0.04);position:sticky;top:0;z-index:40}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 12px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--green),#20b358);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}
+    nav a{margin-left:16px;text-decoration:none;color:var(--dark);font-weight:600}
+    .cta{background:var(--green);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:42px 0}
+    .hero h1{font-size:34px;margin:0 0 10px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .hero .buttons{display:flex;gap:12px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 22px rgba(29,31,32,0.06)}
+
+    /* services grid */
+    .services{display:flex;gap:14px;margin-top:22px}
+    .service{flex:1;padding:14px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfff9);text-align:center}
+
+    /* features */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:36px 0}
+    .feature{background:#fff;padding:18px;border-radius:10px;box-shadow:0 4px 14px rgba(20,20,20,0.03)}
+    .feature h4{margin:6px 0 0}
+
+    /* footer */
+    footer{padding:28px 0;color:var(--muted);font-size:14px}
+
+    /* responsive */
+    @media (max-width:980px){.hero{grid-template-columns:1fr;}.features{grid-template-columns:repeat(2,1fr)}nav a{display:none}.brand{gap:8px}}
+    @media (max-width:520px){.features{grid-template-columns:1fr}.hero h1{font-size:26px}}
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .small{font-size:13px}
+    .center{text-align:center}
+    a.link{color:var(--accent);text-decoration:none}
+
+    /* form */
+    .form-row{display:flex;gap:10px}
+    input,select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e6e6}
+    .btn{background:var(--accent);border:none;color:#fff;padding:10px 12px;border-radius:8px;font-weight:700}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">S</div>
+        <div>
+          <div style="font-weight:800">Safeera</div>
+          <div class="small muted">Your Ride, Your Safety</div>
+        </div>
+      </div>
+      <div>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#book">Book a Ride</a>
+        <a href="#drivers">Drivers</a>
+        <a class="cta" href="#book">Book Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="hero">
+      <div>
+        <h1>Safeera — सुरक्षित प्रवासाची नवी युग</h1>
+        <p>Trusted bike & car rides, instant booking and verified drivers. Start with our pilot service in your city.</p>
+        <div class="buttons">
+          <a class="cta" href="#book">Book Your Ride</a>
+          <a class="link" href="#drivers">Driver Sign-up</a>
+        </div>
+
+        <div class="services">
+          <div class="service">
+            <strong>🚖 Bike Taxi</strong>
+            <div class="muted small">Fast city travel</div>
+          </div>
+          <div class="service">
+            <strong>🚘 Car Rides</strong>
+            <div class="muted small">Comfort for groups</div>
+          </div>
+          <div class="service">
+            <strong>📦 Parcel Delivery</strong>
+            <div class="muted small">Same-day deliveries</div>
+          </div>
+        </div>
+
+        <div class="features">
+          <div class="feature"><strong>Live Tracking</strong><h4 class="muted small">Real-time driver location</h4></div>
+          <div class="feature"><strong>SOS & Safety</strong><h4 class="muted small">Emergency support in-app</h4></div>
+          <div class="feature"><strong>Verified Drivers</strong><h4 class="muted small">KYC & document checks</h4></div>
+        </div>
+      </div>
+
+      <aside class="card" style="width:100%;max-width:420px">
+        <h3 class="center">Quick Book</h3>
+        <p class="center muted small">Fill the form — we'll assign a driver and call you.</p>
+
+        <!-- Replace the href with your Google Form share URL (link to 'Book a Ride' form) -->
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:12px">
+          <a class="btn" href="REPLACE_WITH_GOOGLE_FORM_LINK" target="_blank">Open Booking Form</a>
+          <a class="btn" href="#" id="callBtn">Request Call Back</a>
+          <div style="font-size:12px;color:var(--muted)" class="center">Or WhatsApp: <a class="link" href="https://wa.me/91XXXXXXXXXX">+91 XXXXXXXXXX</a></div>
+        </div>
+
+        <hr style="margin:14px 0;border:none;border-top:1px solid #f0f0f0" />
+        <div style="font-size:13px;color:var(--muted)">
+          <div><strong>How it works</strong></div>
+          <ol style="padding-left:18px;margin:8px 0">
+            <li>Book using the form/WhatsApp</li>
+            <li>We assign an available driver</li>
+            <li>Pay by Cash / UPI</li>
+          </ol>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" style="margin-top:30px">
+      <div class="card" style="padding:18px">
+        <h3>About Safeera</h3>
+        <p class="muted">Safeera is a pilot ride-hailing service focused on safety-first urban travel. We verify drivers, provide emergency support, and aim for punctual, affordable rides.</p>
+      </div>
+    </section>
+
+    <section id="book" style="margin-top:26px">
+      <h3>Book a Ride</h3>
+      <p class="muted">Click the booking button, or use the in-page quick form below.</p>
+
+      <!-- Inline simplified booking form -->
+      <div class="card" style="margin-top:12px">
+        <form id="quick-book" onsubmit="handleQuickBook(event)">
+          <div class="form-row">
+            <input required placeholder="Full name" name="name" />
+            <input required placeholder="Phone (10 digits)" name="phone" />
+          </div>
+          <div style="margin-top:8px">
+            <input required placeholder="Pickup location" name="pickup" />
+          </div>
+          <div style="margin-top:8px">
+            <input required placeholder="Drop location" name="drop" />
+          </div>
+          <div style="margin-top:8px" class="form-row">
+            <input type="datetime-local" name="datetime" />
+            <select name="vehicle">
+              <option value="bike">Bike Taxi</option>
+              <option value="car">Car Ride</option>
+              <option value="parcel">Parcel Delivery</option>
+            </select>
+          </div>
+          <div style="margin-top:12px;display:flex;gap:10px">
+            <button class="btn" type="submit">Request Ride</button>
+            <button type="button" class="btn" style="background:#6c757d" onclick="openGoogleForm()">Open Google Form</button>
+          </div>
+        </form>
+        <p id="bookMsg" style="margin-top:10px;color:var(--muted);font-size:13px"></p>
+      </div>
+    </section>
+
+    <section id="drivers" style="margin-top:26px">
+      <h3>Driver Registration</h3>
+      <p class="muted">Join Safeera as a driver. Fill the driver signup form and our team will contact you.</p>
+      <div class="card" style="margin-top:12px">
+        <p class="small muted">Driver Signup (replace link with your Google Form)</p>
+        <a class="btn" href="REPLACE_WITH_DRIVER_GOOGLE_FORM_LINK" target="_blank">Driver Registration Form</a>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:26px">
+      <h3>Contact Us</h3>
+      <div class="card" style="display:flex;gap:18px;flex-wrap:wrap">
+        <div style="flex:1;min-width:230px">
+          <strong>Call / WhatsApp</strong>
+          <div class="muted small">+91 XXXXXXXXXX</div>
+
+          <div style="margin-top:12px"><strong>Email</strong>
+            <div class="muted small">support@safeera.in</div>
+          </div>
+        </div>
+        <div style="flex:1;min-width:230px">
+          <strong>Office (Pilot City)</strong>
+          <div class="muted small">Your city name, Street, ZIP</div>
+        </div>
+      </div>
+    </section>
+
+    <footer style="margin-top:40px">
+      <div class="container center">
+        <div class="muted">Follow us on
+          <a class="link" href="#">Instagram</a> • <a class="link" href="#">Facebook</a>
+        </div>
+        <div style="margin-top:10px" class="muted">© 2025 Safeera. All rights reserved.</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    function openGoogleForm(){
+      window.open('REPLACE_WITH_GOOGLE_FORM_LINK','_blank')
+    }
+
+    function handleQuickBook(e){
+      e.preventDefault();
+      const f=new FormData(e.target);
+      const data={}
+      for(const [k,v] of f.entries()) data[k]=v
+      console.log('Booking request',data)
+      document.getElementById('bookMsg').innerText='Thanks! We received your booking request. Our team will call you shortly.'
+      e.target.reset()
+    }
+
+    document.getElementById('callBtn')?.addEventListener('click',()=>{
+      alert('Please call or WhatsApp +91 XXXXXXXXXX — or use the booking form.')
+    })
+  </script>
+</body>
+</html>
